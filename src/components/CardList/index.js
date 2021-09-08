@@ -5,7 +5,7 @@ export default function CardList(props) {
     return (
         <div className="bg-white shadow">
             <div className="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Praktikan RPLBK 2021</h2>
+                <h2 className="text-2xl font-extrabold tracking-tight text-gray-900">Laptop</h2>
                 <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
                     
                     {data.map((data) => (
@@ -16,12 +16,17 @@ export default function CardList(props) {
                             </div>
                             <div className="mt-4 flex justify-between">
                                 <div>
-                                   <h3 className={`${data.isNameBold ? "font-bold " : ""} text-sm text-gray-700`}>
-                                       <span aria-hidden="true" className="absolute inset-0" />{data.name}
-                                   </h3>
-                                    <p className="mt-1 text-sm text-gray-500">{data.nim}</p>
+                                    <table>
+                                        <tr>
+                                        <td><p className="mt-1 text-sm text-gray-500">{data.nama}</p></td>
+                                        <td><p className="text-sm font-medium font-bold text-green-900">{`${data.isads == "True" ? "ads" : ""}`}</p></td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <h3 className={`${data.isPriceBold=="True" ? "font-bold " : ""} text-sm text-gray-700`}>
+                                        <span aria-hidden="true" className="absolute inset-0" />{data.harga}
+                                    </h3>
                                 </div>
-                                <p className="text-sm font-medium text-gray-900">Kelompok : {data.kelompok}</p>
                             </div>
                         </div>
                     ))}

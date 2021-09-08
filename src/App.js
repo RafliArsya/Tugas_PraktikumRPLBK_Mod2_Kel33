@@ -3,18 +3,23 @@ import './App.css';
 
 function App() {
   return (
-  <div className="C">
-    <div
-    className="flex items-center justify-center bg-gray-50"
-    style={{ height: "50vh" }}
-    >
-      <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
-        <span className="block">Selamat Datang di Praktikum RPLBK</span>
-        <span className="block text-indigo-600">Modul 2</span>
-        <p className="text-center text-gray-300 font-normal">"Ini baru setup dan konfigurasi projek yaa :)"</p>
-      </h2>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-start lg:w-0 lg:flex-1">
+          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+              Sign in
+            </a>
+            <a
+              href="#"
+              className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+            >
+              Sign up
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
   );
 }
 
