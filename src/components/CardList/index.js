@@ -19,11 +19,11 @@ export default function CardList(props) {
                                     <table>
                                         <tr>
                                         <td><p className="mt-1 text-sm text-gray-500">{data.nama}</p></td>
-                                        <td><p className="text-sm font-medium font-bold text-green-900">{`${data.isads == "True" ? "ads" : ""}`}</p></td>
+                                        <td><p className="text-sm font-medium font-bold text-green-900">{`${data.isads && data.isads === "True" ? "ads" : ""}`}</p></td>
                                         </tr>
                                     </table>
                                     
-                                    <h3 className={`${data.isPriceBold=="True" ? "font-bold " : ""} text-sm text-gray-700`}>
+                                    <h3 className={`${data.isPriceBold && data.isPriceBold==="True" ? "font-bold " : ""} text-sm text-gray-700`}>
                                         <span aria-hidden="true" className="absolute inset-0" />{data.harga}
                                     </h3>
                                 </div>
